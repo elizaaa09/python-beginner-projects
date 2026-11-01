@@ -1,6 +1,6 @@
 # python-beginner-projects
 My Python programming projects and learning journey
-# My Python Projects 🐍
+# My Python Projects 
 
 Hi! I'm Eliza, a Class 12 student learning Python, SQL, and software development.
 
