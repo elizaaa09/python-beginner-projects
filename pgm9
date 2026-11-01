@@ -1,0 +1,42 @@
+import pickle
+
+f = open("studentdetails.dat", "wb")
+
+l = []
+
+n = int(input("Enter number of students:"))
+
+for i in range(n):
+    r = int(input("Enter roll number:"))
+    na = input("Enter name:")
+    m = float(input("Enter marks:"))
+
+    rec = [r, na, m]
+    l.append(rec)
+
+pickle.dump(l, f)
+f.close()
+
+f2 = open("studentdetails.dat", "rb")
+det = pickle.load(f2)
+
+print("Student Records:")
+
+for i in det:
+    print(i)
+
+x = int(input("Enter roll number to search:"))
+
+for i in det:
+    if x == i[0]:
+        print("Record found")
+        print("Roll Number:", i[0])
+        print("Name:", i[1])
+        print("Marks:", i[2])
+
+c = 0
+
+for i in det:
+    if i[2] > 75:
+        c+=1
+print("No of studentsscoring above 75 :",c)
